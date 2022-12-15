@@ -1,0 +1,9 @@
+{'Raju': 'You can win'} taken on Thu Dec 15 14:56:48 2022 
+{'Ashok Singh': 'Rich dad poor dad'} taken on Thu Dec 15 16:43:53 2022 
+{'Ashok Singh': 'Pirates of the Caribbean'} taken on Thu Dec 15 16:44:55 2022 
+{'Rameshwor Pant': 'PIRATES OF THE CARIBBEAN'} taken on Thu Dec 15 16:54:01 2022 
+{'Rameshwor Pant': 'YOU CAN WIN'} taken on Thu Dec 15 16:54:17 2022 
+{'SRK': 'ONE PIECE'} taken on Thu Dec 15 16:59:30 2022 
+{'SRK': 'ONE PIECE'} taken on Thu Dec 15 17:00:18 2022 
+{'Steve Jobs': 'RICH DAD POOR DAD'} taken on Thu Dec 15 17:01:30 2022 
+{'Steve Jobs': 'YOU CAN WIN'} taken on Thu Dec 15 17:01:39 2022 
