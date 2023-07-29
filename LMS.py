@@ -1,4 +1,4 @@
-#Currently working here...... 12/15/2022   4:34 PM
+#Currently working here...... 12/15/2022   4:34 PM "Main program committed"
 
 import time
 
@@ -10,8 +10,9 @@ class Library:
         self.library_name = library_name
         self.lenddict = {}
         self.adddict = {}
+        self.returndict = {}
 
-    #To create and file and take log   (Working fine) 12/15/2022
+    #To create the file and take log   (Working fine) 12/15/2022
     def lend_logs(self, lenddict):
         t = time.asctime()
         with open("User_logs.txt" , "a") as f:
@@ -22,6 +23,12 @@ class Library:
         with open("Book_Add_logs.txt" , "a") as f:
             f.write(f"Added {adddict} on {t} \n")
 
+    def return_logs(self , returndict):
+        t = time.asctime()
+        with open ("Return_logs.txt" , "a") as f:
+            f.write(f"Returned {returndict} on {t} \n")
+
+        pass 
 
     @property
     def Displaybook(self):
@@ -67,11 +74,16 @@ class Library:
 
 
     #Method to return book to the library
+    @property
     def Returnbook(self):
+        user_return_name = input("Enter your name: ")
         user_returnbook_bookname = input("Name the book you want to return: ")
-        for index, items in enumerate(var1):
+
+        for items in var1:          #Using copy of list i.e var1.
             if user_returnbook_bookname.upper() == items:
                 kinglibrary.listofbooks.append(user_returnbook_bookname.upper())
+                self.returndict = {user_return_name: user_returnbook_bookname}
+                kinglibrary.return_logs(self.returndict)
                 break
 
         
@@ -82,23 +94,33 @@ kinglibrary = Library(["YOU CAN WIN" ,"RICH DAD POOR DAD" ,"NARUTO SHIPPUDEN",\
 
 var1 = kinglibrary.Displaybook.copy()        # Idea For making copy of books available in the library
 
+print("\n \t \t Welcome To The Library Management System: \n")
+
+#Start of infinite loop
 while True:
-    user_input = input(
-        "press D to Display Books, L to Lend Book , A to Add Book and R Return Book \t")
+
+    user_input = input("Press D to Display Available Books, L to Lend Book , A to Add Book , R to Return\
+ Book and E to exit the Library: ")
     
     #To display books
     if user_input.upper() == "D":
         for i in enumerate(kinglibrary.Displaybook):
             print(i)
 
-    if user_input.upper() == "L":
+    elif user_input.upper() == "L":       #To lend Books
         kinglibrary.Lendbook
 
-    if user_input.upper() == "A":
+    elif user_input.upper() == "A":       #To Add Books
         kinglibrary.Addbook
-    
-    if user_input.upper() == "R":
-        kinglibrary.Returnbook()
+        
+    elif user_input.upper() == "R":       #To Return Books
+        kinglibrary.Returnbook
+        
+    elif user_input.upper() == "E":
+        break
+        
+    else:
+        print("Wrong Input...")
 
 
 """     TO DO LIST:

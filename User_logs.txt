@@ -7,3 +7,6 @@
 {'SRK': 'ONE PIECE'} taken on Thu Dec 15 17:00:18 2022 
 {'Steve Jobs': 'RICH DAD POOR DAD'} taken on Thu Dec 15 17:01:30 2022 
 {'Steve Jobs': 'YOU CAN WIN'} taken on Thu Dec 15 17:01:39 2022 
+{'Amir Khan': 'ONE PIECE'} taken on Fri Dec 16 09:59:13 2022 
+
+{'Shishir': 'YOU CAN WIN'} taken on Sun Jun 11 10:39:54 2023 
